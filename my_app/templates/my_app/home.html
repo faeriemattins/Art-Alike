@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -30,155 +32,151 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<!-- octicon-->
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<!--css home-->
+<link rel="stylesheet" href="{% static 'my_app/home.css' %}">
+
   </head>
 
-<style>
-
-      .gtd {
-             color: #faf8d7;
-             text-align: center;
-             background-image: url(https://wallpaperaccess.com/full/1269705.jpg);
-             background-size: cover;
-             font-family: Permanent Marker, sans-serif;
-             text-transform: uppercase;
-             line-height: 3em;
-             padding-top: 6em;
-             padding-bottom: 9em;
-           }
-           .gtd-r1 {
-             font-size: 14em;
-             line-height: 0.90em;
-           }
-
-
-           nav {
-             width: 100%;
-             height: 10%;
-             margin: 0 auto;
-             background: #2b3252;
-             font-family: Permanent Marker, sans-serif;
-             padding: 10px 10px;
-           }
-
-           nav ul {
-             list-style: none;
-             text-align: left;
-           }
-
-           nav ul li {
-             display: inline-block;
-           }
-
-           nav ul li a {
-             display: block;
-             padding: 15px;
-             text-decoration: none;
-             color: #fff;
-             font-weight: 800;
-             text-transform: uppercase;
-             margin: 0 10px;
-           }
-
-           nav ul li a,
-           nav ul li a:after,
-           nav ul li a:before {
-             transition: all .5s;
-           }
-
-
-
-           /* stroke */
-           nav.stroke ul li a,
-           nav.fill ul li a {
-             position: relative;
-           }
-
-           nav.stroke ul li a:after,
-           nav.fill ul li a:after {
-             position: absolute;
-             bottom: 0;
-             left: 0;
-             right: 0;
-             margin: auto;
-             width: 0%;
-             content: '.';
-             color: transparent;
-             background: white;
-             height: 1px;
-           }
-
-           nav.stroke ul li a:hover:after {
-             width: 100%;
-           }
-
-           nav.fill ul li a {
-             transition: all 2s;
-           }
-
-           nav.fill ul li a:after {
-             text-align: left;
-             content: '.';
-             margin: 0;
-             opacity: 0;
-           }
-
-           nav.fill ul li a:hover {
-             color: yellow;
-             z-index: 1;
-           }
-
-           nav.fill ul li a:hover:after {
-             z-index: -10;
-             animation: fill 1s forwards;
-             -webkit-animation: fill 1s forwards;
-             -moz-animation: fill 1s forwards;
-             opacity: 1;
-           }
-
-
-           /* Keyframes */
-           @-webkit-keyframes fill {
-             0% {
-               width: 0%;
-               height: 1px;
-             }
-
-             50% {
-               width: 100%;
-               height: 1px;
-             }
-
-             100% {
-               width: 100%;
-               height: 100%;
-               background: #333;
-             }
-           }
-
-           }
-
-</style>
-<body >
-  <nav class="fill" style="font-size:17px">
+<body data-spy="scroll" data-target="#navbar-example" data-offset="0">
+  <nav id="navbar-example" class="fill" style="font-size:17px">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
         <div class="float-right" style="padding: 0 60px; display:block;">
-          <li><a href="#">Login</a></li>
           <li><span class="glyphicon glyphicon-user" style="color:white"></span></li>
+          <li><a href="#">Login</a></li>
         </div>
-
       </ul>
     </nav>
 <main>
-  <section class="gtd">
-    <div class="container ">
+  <section class="gtd" id="home">
+    <div class="container animated fadeInDown slow">
         <h1 class="gtd-r1">Art</h1>
         <h1 class="gtd-r1">Alike</h1>
       </div>
   </section>
 </main>
+<section id="about" class="py-5 px-2" >
+  <h2 class="h1-responsive font-weight-bold text-center mb-5" style="font-family:segoe print;">About</h2><br>
+  <div class="container" style="padding:0px 0px 50px 110px;font-family:segoe print;">
+    <div class="row">
+      <div class="col-lg-7 text-lg-left">
+        <div class="row">
+          <div class="col-1">
+            <span class="iconify" data-icon="octicon:upload-16" data-inline="false" style="font-size:30px;position:relative;top:20px;"></span>
+          </div>
+          <div class="col-11">
+              <h3>Upload</h4>
+              <p>Upload all your favourite art works here.</p><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <span class="iconify" data-icon="mdi:comment-quote" data-inline="false" style="font-size:30px;position:relative;top:20px;"></span>
+          </div>
+          <div class="col-11">
+              <h3>Comment</h4>
+              <p>Comment on other's works.</p><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <span class="iconify" data-icon="mdi:lightbulb-on" data-inline="false" style="font-size:30px;position:relative;top:20px;"></span>
+          </div>
+          <div class="col-11">
+              <h3>Recieve</h4>
+              <p>Recieve recommendations and tips from similar minded people.</p><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <span class="iconify" data-icon="mdi:account-multiple-plus-outline" data-inline="false" style="font-size:30px;position:relative;top:20px;"></span>
+          </div>
+          <div class="col-11">
+              <h3>Join</h4>
+              <p>Join a community of like minded people.</p><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 text-lg-left">
+        <div class="row">
+          <div class="col-1">
+            <span class="iconify" data-icon="mdi:account-heart-outline" data-inline="false" style="font-size:30px;position:relative;top:20px;right: 10px;"></span>
+          </div>
+          <div class="col-11">
+              <h3>Follow</h4>
+              <p>Follow your favorite artists and get inspired.</p><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <span class="iconify" data-icon="mdi:content-save-move" data-inline="false" style="font-size:30px;position:relative;top:20px;right: 10px;"></span>
+          </div>
+          <div class="col-11">
+              <h3>Save</h4>
+              <p>Save posts for future reference.</p><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <span class="iconify" data-icon="mdi:heart-outline" data-inline="false" style="font-size:30px;position:relative;top:20px;right: 10px;"></span>
+          </div>
+          <div class="col-11">
+              <h3>Like</h4>
+              <p>Like posts to show your support.</p><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <span class="iconify" data-icon="mdi:sticker-emoji" data-inline="false" style="font-size:30px;position:relative;top:20px;right: 10px;"></span>
+          </div>
+          <div class="col-11">
+              <h3>Express</h4>
+              <p>A podium to express you talents.</p><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<footer class="footer">
+    <div class="container text-center" style="padding: 10px 0px 10px 0px">
+      <h3>Developed By:</h3>
+    </div>
+    <div class="" style="padding: 0px 0px 100px 10px">
+      <div class="col-lg-6 text-lg-right">
+        <div class="row">
+          <div class="col-6" style="position: relative; left: 250px; padding: 10px 0px 0px 0px">
+            R. Faerie Mattins
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-7" style="position: relative; left: 300px; padding: 10px 0px 0px 0px">
+            <span class="iconify" data-icon="mdi:gmail" data-inline="false"></span>
+            faeriemattins73191817@gmail.com
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 text-lg-left">
+        <div class="row">
+          <div class="col-6" style="position: relative; left: 110px; padding: 10px 0px 0px 0px">
+            S. Srivarshan
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6" style="position: relative; left: 70px; padding: 10px 0px 0px 0px">
+            <span class="iconify" data-icon="mdi:gmail" data-inline="false"></span>
+            srivarshan02@gmail.com
+          </div>
+        </div>
+      </div>
+    </div>
 
 
+
+  </footer>
 </body>
 </html>
