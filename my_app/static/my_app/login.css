@@ -1,0 +1,43 @@
+.bg
+{
+  background-image: url(https://wallpapercave.com/wp/wp2009103.jpg);
+  background-size: cover;
+}
+
+.card{
+height: 340px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(255, 255, 255, 0.8); !important;
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #6fc1f7;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: #3ed655;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left:38%;
+}
