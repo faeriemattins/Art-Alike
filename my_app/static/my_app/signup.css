@@ -1,0 +1,108 @@
+.bg
+{
+  background-image: url(https://images.wallpaperscraft.com/image/triangle_light_blurred_88541_1920x1080.jpg);
+  background-size: cover;
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-control {
+  ​​​​​ border-color: #eee;
+  min-height: 41px;
+  box-shadow: none !important;
+}
+
+​​​ .form-control:focus {
+  ​​​​​ border-color: #5cd3b4;
+}
+
+​​​​​ .form-control, .btn
+{
+  ​​​​​ border-radius: 3px;
+}
+
+.signup-form
+ {
+  ​​​​​height: 100px;
+  width: 550px;
+  margin: 0 auto;
+ padding: 100px 0;
+}
+
+.signup-form form
+ {
+  ​​​​​ color: #999;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  background: #272727;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding:30px;
+}
+
+​​​ .signup-form
+ {
+  ​​​​​height: 100px;
+  width: 550px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+
+.signup-form h2 {
+  ​​​​​ color: #fff;
+  margin: 0 0 30px 0;
+  display: inline-block;
+  padding: 0 30px 10px 0;
+  border-bottom: 3px solid #5cd3b4;
+  font-family: Permanent Marker, sans-serif;
+  font-size: 32px;
+}
+
+.signup-form .form-group row {
+  ​​​​​ margin-bottom: 20px;
+}
+
+.signup-form label {
+ ​​​​​ font-weight: normal;
+ font-size: 14px;
+ line-height: 2;
+}
+
+.signup-form input[type="checkbox"]
+{
+​​​​​ position: relative;
+top: 1px;
+}
+
+.signup-form .btn {
+font-weight: bold;
+background-color: #90d5ec;
+background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+border: none;
+margin-top: 20px;
+min-width: 140px;
+color: #272727;
+}
+
+.signup-form .btn:hover, .signup-form .btn:focus {
+​​​​​ background: #41cba9;
+outline: none !important;
+}
+
+.signup-form a {
+​​​​​ color: #5cd3b4;
+text-decoration: underline;
+}
+
+​​​​​ .signup-form a:hover {
+​​​​​ text-decoration: none;
+}
+
+​​​​​ .signup-form form a {
+​​​​​ color: #5cd3b4;
+text-decoration: none;
+}
+
+​​​​​ .signup-form form a:hover {
+​​​​​ text-decoration: underline;
+}
